@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    html {
+      font-size: 62.5%;
+    }
+    body {
+      background-color: #e5e5e5;
+    }
+    .attribution { 
+      font-size: 11px; 
+      text-align: center; 
+      position: absolute; 
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    .container {
+      margin: auto;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #ffffff;
+      height: 35rem;
+      width: 45rem;
+      border-radius: 1rem 1rem 11.5rem 1rem;
+      padding: 3rem;
+
+      @media (max-width: 600px) {
+      height: 20rem;
+      width: 30rem;
+    }
+    }
+    .svg {
+      background-color: #8030f0;
+      display: inline-block;
+      border-radius: 50%;
+      padding: 1rem;
+      position: absolute;
+      right: 2rem;
+      top: 10rem;
+    }
+    svg {
+      height: 3rem;
+      width: 3.5rem;
+
+      @media (max-width: 600px) {
+      height: 2rem;
+      width: 2.5rem;
+    }
+    }
+    .form {
+      display: flex;
+      flex-direction: row;
+    }
+    .input {
+      display: flex;
+      flex-direction: column;
+    }
+    .labelBox {
+      color: #929191;
+      margin-bottom: .5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: .7rem;
+    }
+    .labelBoxH {
+      color: #ec0404;
+    }
+    .inputBox {
+      width: 7rem;
+      height: 3.5rem;
+      margin-right: 3rem;
+      border: 1px solid #dfdfdf;
+      padding: 1rem;
+
+      @media (max-width: 600px) {
+        width: 4.5rem;
+        height: 1.5rem;
+        padding: .8rem;
+    }
+    }
+    .inputBoxH { 
+      border: 1px solid #f31212;
+    }
+    .inputBox:focus {
+      border: 1px solid #8030f0;
+      outline: none;
+    }
+    .inputBox:focus:invalid {
+      border: 1px solid #f04141;
+    }
+    .empty__text {
+      color: red;
+      margin-top: .5rem;
+    }
+    .hidden {
+      display: none;
+    }
+    .textCon {
+      font-size: 6.5rem;
+      margin-top: 3rem;
+      font-family: 'Ysabeau Office', sans-serif;
+      font-weight: bold;
+
+      @media (max-width: 600px) {
+      font-size: 3rem;
+    }
+      
+    }
+    .text {
+      margin: 0;
+    }
+    .num {
+      color: #8030f0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="svg">
+      <svg xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="2"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+    </div>
+    <form action="#" class="form">
+      <div class="input">
+      <label for="" class="labelBox label__day" >Day</label>
+      <input type="number" class="inputBox input__day" placeholder="DD">
+      <div class="hidden empty__text">
+        This field is required
+      </div>
+      </div>
+
+      <div class="input">
+        <label for="" class="labelBox label__day">Month</label>
+      <input type="number" class="inputBox input__month" placeholder="MM">
+      <div class="hidden empty__text">
+        This field is required
+      </div>
+      </div>
+
+      <div class="input">
+        <label for="" class="labelBox label__day">year</label>
+      <input type="number" class="inputBox input__year" placeholder="YYYY">
+      <div class="hidden empty__text">
+        This field is required
+      </div>
+      </div>
+    </form>
+
+    <div class="textCon">
+      <p class="text year"><span class="num year_num">- -</span> years</p>
+      <p class="text month"><span class="num month_num">- -</span> months</p>
+      <p class="text day"><span class="num day_num">- -</span> days</p>
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Faheez Adekola</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
